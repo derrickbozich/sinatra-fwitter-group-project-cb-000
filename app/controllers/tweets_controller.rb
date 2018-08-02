@@ -57,7 +57,7 @@ class TweetsController < ApplicationController
   post '/tweets/:id' do
     @tweet = Tweet.find_by_id(params['id'])
     if params['content'] != ""
-      
+
 
       @tweet.content = params['content']
       @tweet.save
