@@ -61,7 +61,7 @@ class TweetsController < ApplicationController
       @tweet = Tweet.find_by_id(params['id'])
       @tweet.content = params['content']
       @tweet.save
-
+      redirect "/tweets/#{@tweet.id}/edit"
     else
       redirect "/tweets/#{@tweet.id}/edit"
     end
