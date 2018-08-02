@@ -55,7 +55,7 @@ class TweetsController < ApplicationController
   end
 
   post '/tweets/:id' do
-
+    binding.pry
     if params['content'] != ""
 
       @tweet = Tweet.find_by_id(params['id'])
