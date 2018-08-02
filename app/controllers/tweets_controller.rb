@@ -63,7 +63,7 @@ class TweetsController < ApplicationController
       @tweet.save
 
     else
-      binding.pry
+      
       redirect "/tweets/#{@tweet.id}/edit"
     end
   end
