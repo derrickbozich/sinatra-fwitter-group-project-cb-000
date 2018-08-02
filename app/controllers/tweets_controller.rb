@@ -71,8 +71,10 @@ class TweetsController < ApplicationController
     binding.pry
     if logged_in?
       @tweet = Tweet.find_by_id(params['id'])
-      
-      @tweet.delete
+      if @tweet.user_id == session['user_id']
+        @tweet.delete
+      end
+
 
     else
       redirect '/login'
