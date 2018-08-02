@@ -71,6 +71,7 @@ class TweetsController < ApplicationController
     binding.pry
     if logged_in?
       @tweet = Tweet.find_by_id(params['id'])
+      
       @tweet.delete
 
     else
