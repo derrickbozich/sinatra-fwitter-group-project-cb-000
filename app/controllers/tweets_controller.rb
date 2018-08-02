@@ -68,7 +68,7 @@ class TweetsController < ApplicationController
   end
 
   post '/tweets/:id/delete' do
-    
+
     if logged_in?
       @tweet = Tweet.find_by_id(params['id'])
       if @tweet.user_id == session['user_id']
